@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/sections/HeroSection";
 import AboutSection from "@/sections/AboutSection";
 import SkillsSection from "@/sections/SkillSection";
-import ProjectsSection from "@/sections/ProjectSection";
+
 import ExperienceSection from "@/sections/ExperienceSection";
 import EducationSection from "@/sections/EducationSection";
 import ContactSection from "@/sections/ContactSection";
@@ -27,7 +27,6 @@ function PortfolioInner() {
         <HeroSection />
         <AboutSection />
         <SkillsSection />
-        <ProjectsSection />
         <ExperienceSection />
         <EducationSection />
         <ContactSection />
