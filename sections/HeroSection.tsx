@@ -1,9 +1,22 @@
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { useTheme } from "@/components/ThemeContext";
+import {
+  Brain,
+  Code2,
+  Database,
+  Sparkles,
+} from "lucide-react"
 
 export default function HeroSection() {
   const { isDark } = useTheme();
+  const items = [
+  { icon: Brain, title: "AI" },
+  { icon: Code2, title: "Frontend" },
+  { icon: Database, title: "Backend" },
+  { icon: Sparkles, title: "Automation" },
+]
+  
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-hidden scroll-mt-24">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -75,28 +88,26 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 0.3 }}
           className="relative hidden lg:block"
         >
-          <div className="relative w-full aspect-square max-w-[500px] mx-auto">
-            <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-[80px] animate-pulse" />
-            <div
-              className={`relative w-full h-full backdrop-blur-3xl rounded-3xl border flex items-center justify-center p-12 ${
-                isDark
-                  ? "bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border-white/10"
-                  : "bg-gradient-to-br from-blue-50 to-indigo-50 border-slate-200"
-              }`}
-            >
-              <div className="grid grid-cols-2 gap-4 w-full">
-                {[1, 2, 3, 4].map((i) => (
-                  <div
-                    key={i}
-                    className={`h-32 rounded-2xl border ${
-                      isDark
-                        ? "bg-white/5 border-white/5"
-                        : "bg-white border-slate-200 shadow-sm"
-                    }`}
-                  />
-                ))}
-              </div>
-            </div>
+          <div className="grid grid-cols-2 gap-4 w-full">
+            {items.map((item, i) => {
+              const Icon = item.icon
+
+              return (
+                <div
+                  key={i}
+                  className={`h-32 rounded-2xl border p-4 flex flex-col items-center justify-center transition-all duration-300 hover:scale-105 ${
+                    isDark
+                      ? "bg-white/5 border-white/5"
+                      : "bg-white border-slate-200 shadow-sm"
+                  }`}
+                >
+                  <Icon className="w-10 h-10 text-blue-500 mb-3" />
+                  <p className="text-sm font-medium">
+                    {item.title}
+                  </p>
+                </div>
+              )
+            })}
           </div>
         </motion.div>
       </div>

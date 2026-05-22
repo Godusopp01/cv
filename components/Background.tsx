@@ -1,41 +1,28 @@
-import { motion } from "framer-motion";
+"use client";
+
 import { useTheme } from "./ThemeContext";
 
 export default function Background() {
   const { isDark } = useTheme();
+
   return (
     <div
-      className={`fixed inset-0 -z-10 pointer-events-none ${
+      className={`fixed inset-0 -z-10 pointer-events-none transition-colors duration-300 ${
         isDark ? "bg-[#0F172A]" : "bg-slate-50"
       }`}
     >
-      {/* Primary Glow */}
-      <motion.div
-        animate={{ x: [0, 100, 0], y: [0, 50, 0] }}
-        transition={{ duration: 20, ease: "linear" }}
-        className={`absolute -top-[10%] -left-[10%] h-[500px] w-[500px] rounded-full blur-[60px] ${
-          isDark ? "bg-blue-500/20" : "bg-blue-400/10"
+      {/* static soft glow only (NO ANIMATION) */}
+      <div
+        className={`absolute -top-20 -left-20 h-[300px] w-[300px] rounded-full blur-3xl ${
+          isDark ? "bg-blue-500/10" : "bg-blue-400/10"
         }`}
       />
-      {/* Secondary Glow */}
-      <motion.div
-        animate={{ x: [0, -100, 0], y: [0, 100, 0] }}
-        transition={{ duration: 25, ease: "linear" }}
-        className={`absolute top-[20%] -right-[10%] h-[400px] w-[400px] rounded-full blur-[50px] ${
-          isDark ? "bg-indigo-500/10" : "bg-indigo-400/8"
-        }`}
-      />
-      {/* Tertiary Glow */}
-      <motion.div
-        animate={{ x: [0, 50, 0], y: [0, -50, 0] }}
-        transition={{ duration: 15, ease: "linear" }}
-        className={`absolute bottom-[10%] left-[20%] h-[600px] w-[600px] rounded-full blur-[70px] ${
-          isDark ? "bg-blue-600/10" : "bg-blue-300/10"
+
+      <div
+        className={`absolute bottom-10 right-0 h-[250px] w-[250px] rounded-full blur-3xl ${
+          isDark ? "bg-indigo-500/10" : "bg-indigo-400/10"
         }`}
       />
     </div>
   );
 }
-
-
-
