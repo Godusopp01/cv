@@ -57,14 +57,14 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            {/* <motion.a
+            <motion.a
               href="#projects"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-3 bg-blue-600 text-white rounded-full font-semibold flex items-center gap-2 hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/20"
             >
               View Projects
-            </motion.a> */}
+            </motion.a>
             <motion.a
               href="https://github.com/Godusopp01"
               target="_blank"

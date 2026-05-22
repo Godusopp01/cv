@@ -9,30 +9,30 @@ const projects = [
     description:
       "A comprehensive restaurant ordering platform featuring secure authentication and a real-time dashboard for kitchen management.",
     image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1000&auto=format&fit=crop",
-    tech: ["React", "Firebase", "Tailwind CSS", "Node.js"],
-    github: "#",
-    live: "#",
+      "./qrpic.png",
+    tech: ["Next.js", "Firebase", "Tailwind CSS", "TypeScript"],
+    github: "https://github.com/Godusopp01/QR-Dining.git",
+    live: "https://qr-dining-omega.vercel.app/",
   },
   {
-    title: "AI Route Assistant",
+    title: "Booking Room Website",
     description:
-      "An intelligent travel companion built with Vertex AI and Google Maps API to provide personalized route recommendations and travel insights.",
+      "A modern room booking platform with real-time availability and reservation management.",
     image:
-      "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=1000&auto=format&fit=crop",
-    tech: ["Next.js", "Google Maps API", "Vertex AI", "Cloud Functions"],
-    github: "#",
-    live: "#",
+      "./bookpic.png",
+    tech: ["Next.js", "JavaScript", "Tailwind CSS", "Vercel"],
+    github: "https://github.com/Godusopp01/Booking-room.git",
+    live: "https://booking-room-ashen.vercel.app/",
   },
   {
-    title: "Tarot Reading Website",
+    title: "Billing Management",
     description:
-      "A modern, multilingual web application for tarot and horoscopes, featuring an elegant UI and automated interpretation engines.",
+      "A streamlined billing management platform for tracking invoices, payments, and financial records in real time.",
     image:
-      "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1000&auto=format&fit=crop",
-    tech: ["React", "i18next", "Framer Motion", "Vercel"],
-    github: "#",
-    live: "#",
+      "./billpic.png",
+    tech: ["vue.js", "Nuxt 3", "Tailwind CSS", "Node.js" ,"JavaScript"],
+    github: "https://github.com/Godusopp01/project-bill.git",
+    //live: "https://billing-management.vercel.app/",
   },
 ];
 
@@ -62,7 +62,7 @@ export default function ProjectsSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center justify-items-center">
           {projects.map((project, idx) => (
             <motion.div
               key={project.title}
